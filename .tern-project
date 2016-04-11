@@ -1,0 +1,18 @@
+{
+    "libs": [
+        "browser",
+        "jquery"
+    ],
+    "loadEagerly": [
+        "*.js",
+        "./js/*.js",
+        "./node_modules/*.js"
+    ],
+    "plugins": {
+        "requirejs": {
+            "baseURL": "./js/index.jsx",
+            "paths": {}
+        },
+        "node": {}
+    }
+}

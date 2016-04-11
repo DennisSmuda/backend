@@ -1,0 +1,73 @@
+
+
+button {
+  background-color: #f1f1f1;
+  height: 100%;
+  padding: 1rem;
+  border: none;
+  font-size: 0.7rem;
+  transition: all 0.3s;
+  border: 1px solid #ccc;
+  cursor: pointer;
+
+
+  &:hover {
+    background-color: #c1c1c1;
+  }
+}
+
+
+
+
+
+
+
+// Animation example
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// css tricks
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(0,0,0,0.25);
+  border: 1px solid rgba(0,0,0,0.25);
+}
