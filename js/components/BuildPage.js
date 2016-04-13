@@ -12,13 +12,17 @@ export default class BuildPage extends React.Component {
   constructor(props) {
     super(props);
     this.state =  {
-      items: [],
-      text: ""
+      title: '',
+      description: '',
+      paragraph: ''
     };
+    this.newPageRef;
+    this.submit = this.submit.bind(this);
   }
 
   componentWillMount() {
-    this.firebaseRef = new Firebase('https://blistering-torch-8436.firebaseio.com/pages');
+    this.firebaseRef = new Firebase('https://blistering-torch-8436.firebaseio.com/');
+    this.pagesRef = this.firebaseRef.child('pages');
   }
 
   render() {
@@ -41,6 +45,10 @@ export default class BuildPage extends React.Component {
   }
 
   submit() {
-    console.log("submit");
+    this.newPageRef = this.pagesRef.child('testpage').set({
+      title: 'Testpage',
+      description: 'test description',
+      paragraph: 'motherfucker'
+    });
   }
 }
