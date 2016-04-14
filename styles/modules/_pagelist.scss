@@ -1,0 +1,46 @@
+.pages {
+  background-color: rgba(0,0,0,0.03);
+  width: 300px;
+  border: 1px solid rgba(0,0,0,0.04);
+
+  h3 {
+    padding: 1rem;
+    margin: 0;
+  }
+}
+
+ul.page-list {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+
+  li {
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.04);
+      padding-left: 1.3rem;
+    }
+  }
+}
+
+.pagelist-transition-enter {
+  opacity: 0.01;
+}
+
+.pagelist-transition-enter.pagelist-transition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.pagelist-transition-leave {
+  opacity: 1;
+}
+
+.pagelist-transition-leave.pagelist-transition-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

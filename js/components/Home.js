@@ -3,6 +3,7 @@ import { Link } from 'rrtr';
 
 import NavLink from '../modules/NavLink';
 import Navbar from '../modules/Navbar';
+import PageList from '../modules/PageList';
 
 export default class Main extends React.Component {
 
@@ -31,29 +32,19 @@ export default class Main extends React.Component {
   }
 
   render() {
+    console.log(this.state.pages);
 
     return(
       <main>
         <Navbar name="HOME" />
 
         <div className="app-body">
-          <h3>Pages</h3>
 
-            {this.state.pages.map((item) => {
-            return (
-              <div
-                className="pages"
-                id={item['.key']}
-                value={item['.value']}
-                update={this.update}
-                remove={this.remove}
-                key={item['.key']}
-              >
-              {item.title}
-              </div>
-            );
-          })}
-
+          <div className="pages">
+            <h3>Pages</h3>
+            <PageList pages={this.state.pages} />
+          </div>
+          
         </div>
       </main>
     );
