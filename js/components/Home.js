@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'rrtr';
+import { Link } from 'react-router';
 
 import NavLink from '../modules/NavLink';
 import Navbar from '../modules/Navbar';
@@ -44,7 +44,7 @@ export default class Main extends React.Component {
             <h3>Pages</h3>
             <PageList pages={this.state.pages} />
           </div>
-          
+
         </div>
       </main>
     );

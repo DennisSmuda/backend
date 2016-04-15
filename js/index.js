@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'rrtr';
+import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 
 import App from './containers/App';
 // import ReduxApp from './containers/ReduxApp';
