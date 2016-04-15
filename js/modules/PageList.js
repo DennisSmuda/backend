@@ -12,17 +12,20 @@ export default class PageList extends React.Component {
   }
 
   render() {
+
+    let className = `page ${this.props.collapsed}`;
+    console.log(className);
     var items = this.props.pages.map((item) => {
       return (
         <li
-          className="page"
+          className={className}
           id={item['.key']}
           value={item['.value']}
           update={this.update}
           remove={this.remove}
           key={item['.key']}
         >
-        {item.title}
+        {item.title} <span className="description-text">{item.description}</span>
         </li>
       );
     });

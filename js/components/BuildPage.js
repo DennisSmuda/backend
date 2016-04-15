@@ -39,7 +39,7 @@ export default class BuildPage extends React.Component {
           <p>Create a new page</p>
 
           <form>
-            <input onChange={this.titleChange} value={this.state.title} className="title" type="text" placeholder="Title" /><br/>
+            <input onChange={this.titleChange} value={this.state.title} className="title" type="text" placeholder="Title" />
             <input onChange={this.descriptionChange} className="description" type="text" placeholder="Description" />
             <textarea onChange={this.paragraphChange} className="paragraph" type="text" placeholder="Paragraph" />
           </form>
