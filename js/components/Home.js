@@ -66,4 +66,8 @@ export default class Main extends React.Component {
       this.setState({pagesCollapsed: true});
     }
   }
+
+  componentWillUnmount() {
+    this.firebaseRef.off();
+  }
 }

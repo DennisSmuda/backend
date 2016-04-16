@@ -26,7 +26,7 @@ export default class BuildPage extends React.Component {
     this.paragraphChange = this.paragraphChange.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.firebaseRef = new Firebase('https://blistering-torch-8436.firebaseio.com/');
     this.pagesRef = this.firebaseRef.child('pages');
   }
@@ -62,5 +62,9 @@ export default class BuildPage extends React.Component {
       description: this.state.description,
       paragraph: this.state.paragraph
     });
+  }
+
+  componentWillUnmount() {
+    this.firebaseRef.off();
   }
 }
